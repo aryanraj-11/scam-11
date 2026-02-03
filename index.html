@@ -3,80 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Love Story</title>
-    <style>
-        body {
-            background: #ff4d6d; /* Deep pink background */
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .card {
-            background: white;
-            width: 350px;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        /* Styling the Image Tags */
-        .valentine-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover; /* Keeps image from looking squashed */
-            border-radius: 10px;
-            border: 5px solid #fff0f3;
-            transition: transform 0.3s ease;
-        }
-
-        .valentine-img:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
-
-        h2 { color: #c9184a; margin-top: 15px; }
-        p { color: #590d22; font-style: italic; }
-
-        .btn-container { margin-top: 20px; }
-        button {
-            background: #ff758f;
-            border: none;
-            padding: 10px 20px;
-            color: white;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+    <title>For My Favorite Person ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <div id="question-page">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueW93N3R6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/v0Yaf6H0X9gqU/giphy.gif" alt="Cute Bear" class="gif">
+            <h1>Will you be my Valentine? 🌹</h1>
+            <div class="buttons">
+                <button id="yes-btn" onclick="showSurprise()">YES!</button>
+                <button id="no-btn" onmouseover="moveButton()">No</button>
+            </div>
+        </div>
 
-    <div class="card" id="card-content">
-        <img src="first_photo.jpg" alt="A cute memory" class="valentine-img">
-        <h2>You're My Favorite</h2>
-        <p>"Every moment with you is a treasure."</p>
-        
-        <div class="btn-container">
-            <button onclick="changeContent()">See Next Memory</button>
+        <div id="surprise-page" class="hidden">
+            <h1>Yay! I love you! ❤️</h1>
+            <p>Here are some of our best memories:</p>
+            <div class="photo-gallery">
+                <img src="photo1.jpg" alt="Memory 1">
+                <img src="photo2.jpg" alt="Memory 2">
+                <img src="photo3.jpg" alt="Memory 3">
+            </div>
+            <p class="love-note">"To the peace of my life, you make every day brighter..."</p>
         </div>
     </div>
-
-    <script>
-        function changeContent() {
-            const card = document.getElementById('card-content');
-            // This replaces the content with a NEW image tag and text
-            card.innerHTML = `
-                <img src="second_photo.jpg" alt="Another memory" class="valentine-img">
-                <h2>Forever & Always</h2>
-                <p>"Distance means so little when someone means so much."</p>
-                <button onclick="location.reload()">Back to Start</button>
-            `;
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
