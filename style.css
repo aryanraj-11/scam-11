@@ -56,3 +56,27 @@ button {
     border: 5px solid white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.lock-screen {
+    background-image: url('background.jpg'); /* Using your heart background */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.lock-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#pass-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ffafbd;
+    margin-bottom: 15px;
+    width: 80%;
+}
