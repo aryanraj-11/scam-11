@@ -40,4 +40,14 @@ function moveButton() {
         colors: ['#ff0000', '#ff69b4', '#ff1493']
       }));
     }, 250);
+    function checkPassword() {
+    const password = document.getElementById("Srush").value;
+    const correctPassword = "OurAnniversaryDate"; // Change this!
+
+    if (password === correctPassword) {
+        window.location.href = "index.html"; // Go to your Valentine page
+    } else {
+        alert("Wrong password! Hint: Our special date.");
+    }
+}
 }
