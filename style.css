@@ -24,7 +24,7 @@ button {
 }
 
 #yes-btn { background-color: #ff4d6d; color: white; margin-right: 10px; }
-#no-btn { background-color: #6c757d; color: white; position: absolute; }
+#no-btn { background-color: #6c757d; color: white; position: relative; }
 
 .hidden { display: none; }
 .photo-gallery img {
