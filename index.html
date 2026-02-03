@@ -3,110 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Valentine</title>
+    <title>Our Love Story</title>
     <style>
-
-        .btn-group {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* This keeps them centered */
-    gap: 40px; /* Gives them some breathing room */
-    height: 100px; /* Creates a safe area for the buttons */
-    position: relative;
-}
-
-#yesBtn { 
-    background-color: #ff4081; 
-    color: white; 
-    z-index: 1; /* Ensures Yes stays on top */
-}
-
-#noBtn { 
-    background-color: #ce93d8; 
-    color: white; 
-    position: relative; /* Change this from absolute to relative initially */
-    transition: 0.1s;
-}
-
-        /* Hidden Gallery Section */
-        #gallery {
-            display: none;
-            text-align: center;
-            overflow-y: auto;
-            max-height: 90vh;
-            width: 100%;
+        body {
+            background: #ff4d6d; /* Deep pink background */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .card {
+            background: white;
+            width: 350px;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        .photo-grid img {
+        /* Styling the Image Tags */
+        .valentine-img {
             width: 100%;
             height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 5px solid white;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            object-fit: cover; /* Keeps image from looking squashed */
+            border-radius: 10px;
+            border: 5px solid #fff0f3;
+            transition: transform 0.3s ease;
         }
 
-        .love-letter {
-            background: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            border-radius: 10px;
-            line-height: 1.6;
-            color: #880e4f;
+        .valentine-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        h2 { color: #c9184a; margin-top: 15px; }
+        p { color: #590d22; font-style: italic; }
+
+        .btn-container { margin-top: 20px; }
+        button {
+            background: #ff758f;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="container" id="questionBox">
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWp0eDhzamZueW9pZ3E0eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpNwSULPk2m/giphy.gif" width="200">
-        <h1>Will you be my Valentine? ❤️</h1>
-        <div class="btn-group">
-            <button id="yesBtn" onclick="celebrate()">YES!</button>
-            <button id="noBtn" onmouseover="moveButton()">No</button>
-        </div>
-    </div>
-
-    <div id="gallery">
-        <h1 style="font-size: 3rem;">Yay! I love you! 🥰</h1>
+    <div class="card" id="card-content">
+        <img src="first_photo.jpg" alt="A cute memory" class="valentine-img">
+        <h2>You're My Favorite</h2>
+        <p>"Every moment with you is a treasure."</p>
         
-        <div class="love-letter">
-            <p>To my favorite person,</p>
-            <p>I made this little space just for us. Here are some of my favorite memories of you/us. You make every day feel like Valentine's Day!</p>
-        </div>
-
-        <div class="photo-grid">
-            <img src="us.jpg.jpeg" alt="Memory 1">
-            <img src="https://via.placeholder.com/300x400?text=Photo+2" alt="Memory 2">
-            <img src="https://via.placeholder.com/300x400?text=Photo+3" alt="Memory 3">
-            <img src="https://via.placeholder.com/300x400?text=Photo+4" alt="Memory 4">
+        <div class="btn-container">
+            <button onclick="changeContent()">See Next Memory</button>
         </div>
     </div>
 
     <script>
-      function moveButton() {
-    const btn = document.getElementById('noBtn');
-    
-    // Switch to absolute only when hovered so it can move freely
-    btn.style.position = 'absolute';
-    
-    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
-    
-    btn.style.left = x + 'px';
-    btn.style.top = y + 'px';
-}
+        function changeContent() {
+            const card = document.getElementById('card-content');
+            // This replaces the content with a NEW image tag and text
+            card.innerHTML = `
+                <img src="second_photo.jpg" alt="Another memory" class="valentine-img">
+                <h2>Forever & Always</h2>
+                <p>"Distance means so little when someone means so much."</p>
+                <button onclick="location.reload()">Back to Start</button>
+            `;
+        }
     </script>
+
 </body>
 </html>
