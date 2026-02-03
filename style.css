@@ -1,12 +1,13 @@
 body {
-    background-color: #ffeef2;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    /* This creates a soft pink to white gradient */
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    font-family: 'Arial', sans-serif;
 }
 
 .container { text-align: center; }
