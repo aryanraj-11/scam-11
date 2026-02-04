@@ -40,14 +40,15 @@ function moveButton() {
         colors: ['#ff0000', '#ff69b4', '#ff1493']
       }));
     }, 250);
-    function checkPassword() {
-    const password = document.getElementById("Srush").value;
-    const correctPassword = "OurAnniversaryDate"; // Change this!
+    function checkAnswer(selectedOption) {
+    const secretWord = "Correct Word"; // Replace this with Srushti's actual phrase
 
-    if (password === correctPassword) {
-        window.location.href = "index.html"; // Go to your Valentine page
+    if (selectedOption === secretWord) {
+        // This hides the lock screen and shows the Valentine content
+        document.getElementById('lock-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
     } else {
-        alert("Wrong password! Hint: Our special date.");
+        alert("Wrong answer! Try again. ❤️");
     }
 }
 }
