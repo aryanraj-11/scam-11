@@ -80,3 +80,24 @@ button {
     margin-bottom: 15px;
     width: 80%;
 }
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.opt-btn {
+    background-color: #f0f0f0;
+    border: 2px solid #ff4d6d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.opt-btn:hover {
+    background-color: #ff4d6d;
+    color: white;
+}
