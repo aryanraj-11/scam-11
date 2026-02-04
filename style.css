@@ -79,3 +79,14 @@ button {
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     text-align: center;
 }
+.gif {
+    /* This ensures the image never gets wider than the white box */
+    width: 100%; 
+    max-width: 300px; /* Adjust this number to make the image smaller or larger */
+    height: auto; /* This keeps the image from looking stretched */
+    border-radius: 15px; /* Optional: gives the photo nice rounded corners */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
