@@ -3,32 +3,20 @@
     50% { background-color: #ffd1d7; }
     100% { background-color: #fff1f2; }
 }
-body {
-    /* Replace 'background.jpg' with your actual image filename */
-    background-image: url('background.jpg.jpg'); 
-    
-    /* This makes the image cover the whole screen */
+body, .lock-screen {
+    /* Use the EXACT filename from your GitHub folder */
+    background-image: url('background.jpg'); 
     background-size: cover;
-    
-    /* This keeps the image centered */
     background-position: center;
-    
-    /* This keeps the image from repeating if the page is long */
-    background-repeat: no-repeat;
-    
-    /* This keeps the background fixed so it doesn't move when scrolling */
     background-attachment: fixed;
-    
-    /* Standard layout settings */
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
 }
-
 .container {
     background: rgba(255, 255, 255, 0.85); /* White with 85% transparency */
     padding: 40px;
