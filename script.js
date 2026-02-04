@@ -40,15 +40,18 @@ function moveButton() {
         colors: ['#ff0000', '#ff69b4', '#ff1493']
       }));
     }, 250);
-    function checkAnswer(selectedOption) {
-    const secretWord = "Correct Word"; // Replace this with Srushti's actual phrase
+   function checkAnswer(selectedOption) {
+    // 1. Define the correct answer here
+    const correctAnswer = "Bye"; 
 
-    if (selectedOption === secretWord) {
-        // This hides the lock screen and shows the Valentine content
-        document.getElementById('lock-screen').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
+    if (selectedOption === correctAnswer) {
+        // 2. Hide the lock screen
+        document.getElementById('password-container').style.display = 'none';
+        
+        // 3. Show the Valentine content
+        document.getElementById('valentine-content').style.display = 'block';
     } else {
-        alert("Wrong answer! Try again. ❤️");
+        // Optional: Add a little shake effect or alert
+        alert("Wrong answer! Srushti would be even angrier! 😂");
     }
-}
 }
