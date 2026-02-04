@@ -109,3 +109,10 @@ button {
     background-color: #ff4d6d;
     color: white;
 }
+#password-container, .container {
+    background: rgba(255, 255, 255, 0.85); /* White with 85% transparency */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* This adds a nice glass effect */
+}
