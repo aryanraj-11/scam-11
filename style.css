@@ -62,7 +62,7 @@ button {
     width: 90%;
 }
 .lock-screen {
-    background-image: url('background.jpg'); /* Ensure this filename is correct */
+    background-image: url('background.jpg.jpg'); /* Ensure this filename is correct */
     background-size: cover;
     background-position: center;
     display: flex;
