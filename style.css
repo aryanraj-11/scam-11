@@ -12,7 +12,7 @@ body {
     align-items: center;
     
     /* The magic lines for your background */
-    background-image: url('background.jpg'); 
+    background-image: url('mike.jpg.jpeg'); 
     background-size: cover;        /* Makes the image cover the whole screen */
     background-position: center;   /* Centers the hearts */
     background-attachment: fixed;  /* Keeps it still when scrolling */
