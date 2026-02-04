@@ -9,8 +9,12 @@
     <div class="lock-container">
         <h2>Enter the Secret Word</h2>
         <p>Hint: Srushti Gussa hone ke baad kya bolti hai?</p>
-        <input type="password" id="pass-input" placeholder="Enter password...">
-        <button onclick="checkPass()">Unlock</button>
+        <div class="options-container">
+    <button class="opt-btn" onclick="checkAnswer('Option 1')">Option 1</button>
+    <button class="opt-btn" onclick="checkAnswer('Correct Word')">Correct Word</button>
+    <button class="opt-btn" onclick="checkAnswer('Option 3')">Option 3</button>
+    <button class="opt-btn" onclick="checkAnswer('Option 4')">Option 4</button>
+</div>
     </div>
 
     <script>
