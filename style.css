@@ -3,32 +3,6 @@
     50% { background-color: #ffd1d7; }
     100% { background-color: #fff1f2; }
 }
-body, .lock-screen {
-    /* Use the EXACT filename from your GitHub folder */
-    background-image: url('background.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container {
-    background: rgba(255, 255, 255, 0.85); /* White with 85% transparency */
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px); /* This blurs the background behind the box! */
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-}
-.gif { width: 250px; margin-bottom: 20px; }
-
 .buttons { margin-top: 20px; }
 button {
     padding: 15px 30px;
@@ -75,32 +49,4 @@ button {
     border: 2px solid #ffafbd;
     margin-bottom: 15px;
     width: 80%;
-}
-.options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.opt-btn {
-    background-color: #f0f0f0;
-    border: 2px solid #ff4d6d;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.opt-btn:hover {
-    background-color: #ff4d6d;
-    color: white;
-}
-#password-container, .container {
-    background: rgba(255, 255, 255, 0.85); /* White with 85% transparency */
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* This adds a nice glass effect */
 }
